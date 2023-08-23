@@ -1,0 +1,39 @@
+.main-container-dolar-bolsa{
+
+  margin-bottom: 200px;
+ 
+  
+}
+
+
+.title-dolar-mep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 50px;
+  }
+
+  
+.container-infoDolar{
+  display: flex;
+  flex-direction: row;
+ 
+  
+}
+
+
+  .infoDolar{ 
+  border: 2px solid white;
+  border-radius: 10%;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: 0.5s;
+    object-fit: cover;
+  }
+
+  .infoDolar:hover{
+    transform: scale(1.1);
+    transition: all 1s ease;
+  }
