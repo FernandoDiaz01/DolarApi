@@ -1,39 +1,86 @@
 .main-container-dolar-bolsa{
+  margin-bottom: 100px;
+  margin-top:15%;
+}
 
-  margin-bottom: 200px;
- 
-  
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 10%;
 }
 
 
 .title-dolar-mep{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     color: white;
-    margin-bottom: 50px;
   }
 
   
-.container-infoDolar{
+.container-info-dolar{
   display: flex;
-  flex-direction: row;
- 
+  flex-direction:column;
+  align-items:center;
+
+  justify-content: space-between;
+  width: 100%;
+  
   
 }
 
+.container-fecha-actualizacion{
+  display: flex;
+  flex-direction: row;
 
-  .infoDolar{ 
+ width: 100%;
+}
+
+.container-compra-venta{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  gap:70px;
+margin-bottom: 10%;
+}
+
+  .info-dolar{ 
   border: 2px solid white;
   border-radius: 10%;
     color: white;
     margin-bottom: 20px;
     padding: 20px;
     transition: 0.5s;
-    object-fit: cover;
+
   }
 
-  .infoDolar:hover{
+  .info-dolar:hover{
     transform: scale(1.1);
     transition: all 1s ease;
   }
+
+.info-fecha-actualizcion{
+  border: 2px solid white;
+  border-radius: 10%;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: 0.5s;
+
+}
+
+.info-fecha-actualizcion:hover{
+  transform: scale(1.1);
+    transition: all 1s ease;
+}
+.loading-data{
+  color: white;
+} 
+
+/* Estilos para centrar la fecha de actualización debajo de la compra y venta */
+@media screen and (max-width: 768px) {
+  .container-info-dolar {
+    flex-direction: column;
+    align-items: center;
+  }
+}

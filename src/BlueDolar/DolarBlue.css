@@ -1,33 +1,42 @@
-.main-container-dolar-blue{
-  margin-top:100px;
-  margin-bottom:100px;
-  
-  
-}
-
-.title-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items:center ;
+.main-container-dolar-blue {
+  margin-top: 15%;
   margin-bottom: 100px;
 }
 
-.title-dolar-blue{
-   color: white;
-
-  
-  }
-
-.container-infoDolar{
+.title-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-bottom: 10px;
-  
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 10%;
 }
 
-  .infoDolar{
-    color: white;
-   
-  }
+.title-dolar-blue {
+  color: white;
+}
+
+.container-info-dolar {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.info-dolar {
+  color: white;
+}
+.info-fecha-actualizcion {
+  border: 2px solid white;
+  border-radius: 10%;
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.info-fecha-actualizcion:hover {
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
+.loading-data {
+  color: white;
+}

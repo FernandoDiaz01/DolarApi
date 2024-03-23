@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from 'axios'
 import './DolarBlue.css'
 import { useEffect, useState } from 'react'
@@ -7,6 +6,8 @@ export const DolarBlue = () => {
     const [compraDolarBlue, setCompraDolarBlue] = useState(null)
     const [ventaDolarBlue, setVentaDolarBlue] = useState(null)
     const [ isLoading, setIsLoading] = useState(true)
+    const [fechaActualizacion, setFechaActualizacion] = useState(null);
+    const [fechaActualizacionFormateada, setFechaActualizacionFormateada] = useState(null);
 
 
     const apiDolarBlue = async ()=>{
@@ -21,6 +22,10 @@ export const DolarBlue = () => {
   
           setCompraDolarBlue(response.data.compra)
         setVentaDolarBlue(response.data.venta) 
+        setFechaActualizacion(response.data.fechaActualizacion)
+
+        const fechaFormateada = new Date(response.data.fechaActualizacion).toLocaleString()
+        setFechaActualizacionFormateada(fechaFormateada)
         setIsLoading(false); 
       } catch (error) {
         console.log('Error en la petición', error)
@@ -57,11 +62,19 @@ export const DolarBlue = () => {
         {isLoading ? (
           <p>Cargando datos...</p>
         ) : (
-          
-          <div className='container-infoDolar'>
-            <h2 className='infoDolar'>Compra: {compraDolarBlue}</h2>
-            <h2 className='infoDolar'>Venta: {ventaDolarBlue}</h2>
+          <>
+          <div className="container-info-dolar">
+          <div className="container-compra-venta">
+            <h2 className="info-dolar">Compra: {compraDolarBlue}</h2>
+            <h2 className="info-dolar">Venta: {ventaDolarBlue}</h2>
           </div>
+        </div>
+          <div className="container-fecha-actualizacion">
+            <h2 className="info-fecha-actualizcion">
+              Última actualización: {fechaActualizacionFormateada}
+            </h2>
+          </div>
+          </>
         )}
 
       </div>
