@@ -1,8 +1,6 @@
 
 import './App.css'
-import { DolarBlue } from './BlueDolar/DolarBlue';
-import { DolarBolsa } from './bolsaDolar/dolarBolsa';
-
+import { Dollar } from './Dollar/Dollar';
 
 
 
@@ -10,8 +8,9 @@ function App() {
 
   return(
     <div className='app-container'>
-   <DolarBlue />
-  <DolarBolsa />
+
+      <Dollar/>
+
 
    </div>
   )
