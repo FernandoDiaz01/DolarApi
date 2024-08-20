@@ -1,61 +1,89 @@
+body {
+    background: linear-gradient(135deg, #1c1c1c, #363636);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
 
 .main-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    padding:10px; 
-    margin-top: 15%;
+    justify-content: center;
+    padding: 20px; 
+    margin-top: 8%;
+    gap: 30px;
 }
 
 .title-dollar-container {
     text-align: center;
-    margin-top: 1%;
+    margin-bottom: 3%;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-.title-dollar{
-    color: white;
+.title-dollar {
+    font-size: 2.5em;
+    color: #ffdd57;
+    text-shadow: 0 4px 15px rgba(255, 221, 87, 0.5);
+    letter-spacing: 2px;
 }
 
 .dollar-cards {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
 }
 
 .dollar-container {
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #444, #222);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.1);
     color: #f8fffa;
-    margin: 1%;
-    transition: transform 0.3s ease;
-    border: 5px solid rgb(255, 255, 255);
-
+    margin: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dollar-container:hover {
-    transform: translateY(-15px);
+    transform: translateY(-20px) rotate(-1deg);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7), -10px -10px 20px rgba(255, 255, 255, 0.2);
 }
 
 .info-dollar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 15px;
+    color: #ffdd57;
 }
 
 .name {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f8fffa;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .date-dollar-container {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #979797;
+    margin-top: 12px;
+    font-size: 1em;
+    color: #d3d3d3;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        margin-top: 5%;
+    }
 }
